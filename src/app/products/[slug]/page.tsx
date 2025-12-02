@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CartDrawer } from '@/components/cart-drawer';
@@ -52,20 +53,32 @@ export default function ProductPage() {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Product Images */}
           <div>
-            <div className="aspect-square bg-white border border-gray-200 mb-4 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <p className="text-sm">Product Image</p>
-                <p className="text-xs mt-2">{product.name}</p>
-              </div>
+            <div className="aspect-square bg-white border border-gray-200 mb-4 relative overflow-hidden">
+              <Image
+                src={product.images[0]}
+                alt={product.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             {/* Thumbnail Gallery */}
             <div className="grid grid-cols-4 gap-2">
-              {[1, 2, 3, 4].map((i) => (
+              {product.images.map((image, i) => (
                 <div
                   key={i}
-                  className="aspect-square bg-white border border-gray-200 cursor-pointer hover:border-black transition-colors"
-                />
+                  className="aspect-square bg-white border border-gray-200 cursor-pointer hover:border-black transition-colors relative overflow-hidden"
+                >
+                  <Image
+                    src={image}
+                    alt={`${product.name} view ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 25vw, 12vw"
+                  />
+                </div>
               ))}
             </div>
           </div>

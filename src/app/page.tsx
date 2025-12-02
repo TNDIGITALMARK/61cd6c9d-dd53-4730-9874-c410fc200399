@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CartDrawer } from '@/components/cart-drawer';
@@ -20,21 +21,39 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Hero Image - Left Side */}
             <div className="relative">
-              <div className="aspect-[4/3] bg-white border border-gray-200 flex items-center justify-center">
-                {/* Main hero product image placeholder */}
-                <div className="text-center text-gray-400">
-                  <p className="text-sm">Hero Product Image</p>
-                  <p className="text-xs mt-2">Hoodie + Bracelet</p>
-                </div>
+              <div className="aspect-[4/3] bg-white border border-gray-200 relative overflow-hidden">
+                <Image
+                  src="/generated/hero-main.jpg"
+                  alt="Unsonu luxury hoodie and bracelet collection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
 
               {/* Product Thumbnails Grid */}
               <div className="absolute right-0 top-0 grid grid-cols-2 gap-2 w-32 md:w-40">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
+                {[
+                  { src: '/generated/thumb-1.jpg', alt: 'Bracelet collection' },
+                  { src: '/generated/thumb-2.jpg', alt: 'Black hoodie' },
+                  { src: '/generated/thumb-3.jpg', alt: 'Silver wire detail' },
+                  { src: '/generated/thumb-4.jpg', alt: 'Leather wrap' },
+                  { src: '/generated/thumb-5.jpg', alt: 'Silver cuff' },
+                  { src: '/generated/thumb-6.jpg', alt: 'Chain bracelet' }
+                ].map((thumb, i) => (
                   <div
                     key={i}
-                    className="aspect-square bg-white border border-gray-200 hover:border-black transition-colors cursor-pointer"
-                  />
+                    className="aspect-square bg-white border border-gray-200 hover:border-black transition-colors cursor-pointer relative overflow-hidden"
+                  >
+                    <Image
+                      src={thumb.src}
+                      alt={thumb.alt}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -105,8 +124,24 @@ export default function Home() {
 
             {/* Newsletter Images */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-gray-100 border border-gray-200"></div>
-              <div className="aspect-square bg-gray-100 border border-gray-200"></div>
+              <div className="aspect-square bg-gray-100 border border-gray-200 relative overflow-hidden">
+                <Image
+                  src="/generated/newsletter-1.jpg"
+                  alt="Unsonu jewelry collection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+              <div className="aspect-square bg-gray-100 border border-gray-200 relative overflow-hidden">
+                <Image
+                  src="/generated/newsletter-2.jpg"
+                  alt="Unsonu fashion essentials"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
             </div>
           </div>
         </div>

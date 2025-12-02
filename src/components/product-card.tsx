@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product } from '@/lib/products';
 
 interface ProductCardProps {
@@ -14,10 +15,13 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="bg-white border border-[#EBEBEB] transition-shadow hover:shadow-md">
         {/* Product Image - Square aspect ratio */}
         <div className="aspect-square bg-gray-100 relative overflow-hidden">
-          {/* Placeholder for product image */}
-          <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">
-            {product.name}
-          </div>
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
         </div>
 
         {/* Product Info */}
