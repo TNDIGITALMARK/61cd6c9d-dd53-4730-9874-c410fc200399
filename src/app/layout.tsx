@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ZyloProvider } from "@/lib/zylo/provider";
+import { CartProvider } from "@/contexts/cart-context";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Unsonu - Timeless Luxury",
+  description: "Premium bracelets and minimalist fashion accessories. Discover timeless luxury with Unsonu's curated collection of handcrafted bracelets and upcoming hoodie line.",
 };
 
 export default function RootLayout({
@@ -34,7 +32,7 @@ export default function RootLayout({
 
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         <QueryProvider>
           <ZyloProvider>
@@ -44,11 +42,13 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <TooltipProvider>
-                {children}
-                <Toaster />
-                <Sonner />
-              </TooltipProvider>
+              <CartProvider>
+                <TooltipProvider>
+                  {children}
+                  <Toaster />
+                  <Sonner />
+                </TooltipProvider>
+              </CartProvider>
             </ThemeProvider>
           </ZyloProvider>
         </QueryProvider>
