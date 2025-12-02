@@ -135,6 +135,194 @@ export const products: Product[] = [
       'Comfortable all-day wear',
       'Made to order available'
     ]
+  },
+  {
+    id: '7',
+    name: 'Slate Gray Hoodie',
+    slug: 'slate-gray-hoodie',
+    price: 145,
+    description: 'Premium heavyweight hoodie in sophisticated slate gray. The perfect balance of comfort and refined style.',
+    category: 'hoodie',
+    images: ['/generated/hoodie-2.jpg'],
+    inStock: true,
+    stockLevel: 18,
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    materials: '80% Cotton, 20% Polyester',
+    features: [
+      'Premium heavyweight fabric',
+      'Ribbed cuffs and hem',
+      'Kangaroo pocket',
+      'Embroidered logo detail',
+      'Pre-shrunk for perfect fit'
+    ]
+  },
+  {
+    id: '8',
+    name: 'Double Wrap Leather',
+    slug: 'double-wrap-leather',
+    price: 85,
+    description: 'Rich brown leather bracelet with double wrap design and oxidized silver closure.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-6.jpg'],
+    inStock: true,
+    stockLevel: 9,
+    materials: 'Genuine Leather, Oxidized Silver',
+    features: [
+      'Premium Italian leather',
+      'Double wrap design',
+      'Oxidized silver clasp',
+      'Ages beautifully with wear'
+    ]
+  },
+  {
+    id: '9',
+    name: 'Beaded Stone Bracelet',
+    slug: 'beaded-stone-bracelet',
+    price: 68,
+    description: 'Natural stone beads paired with sterling silver accents. Earthy elegance for the modern minimalist.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-7.jpg'],
+    inStock: true,
+    stockLevel: 14,
+    materials: 'Natural Stone, Sterling Silver',
+    features: [
+      'Natural stone beads',
+      'Sterling silver spacers',
+      'Elastic comfort fit',
+      'Each piece unique'
+    ]
+  },
+  {
+    id: '10',
+    name: 'Geometric Link Bracelet',
+    slug: 'geometric-link-bracelet',
+    price: 110,
+    description: 'Bold geometric links in brushed sterling silver. Architecture-inspired jewelry design.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-8.jpg'],
+    inStock: true,
+    stockLevel: 7,
+    materials: 'Sterling Silver',
+    features: [
+      'Geometric link design',
+      'Brushed silver finish',
+      'Secure box clasp',
+      'Contemporary aesthetic'
+    ]
+  },
+  {
+    id: '11',
+    name: 'Oversized Comfort Hoodie',
+    slug: 'oversized-comfort-hoodie',
+    price: 155,
+    description: 'Luxuriously oversized hoodie in premium cream. Ultimate comfort meets elevated streetwear.',
+    category: 'hoodie',
+    images: ['/generated/hoodie-3.jpg'],
+    inStock: true,
+    stockLevel: 12,
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    materials: '85% Cotton, 15% Polyester',
+    features: [
+      'Oversized relaxed fit',
+      'Ultra-soft fleece interior',
+      'Drop shoulder design',
+      'Extended length',
+      'Premium organic cotton'
+    ]
+  },
+  {
+    id: '12',
+    name: 'Woven Metal Cuff',
+    slug: 'woven-metal-cuff',
+    price: 135,
+    description: 'Intricately woven sterling silver cuff. Textile-inspired metalwork showcasing artisan skill.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-9.jpg'],
+    inStock: true,
+    stockLevel: 5,
+    materials: 'Sterling Silver',
+    features: [
+      'Hand-woven silver wire',
+      'Wide cuff design',
+      'Adjustable opening',
+      'Statement piece'
+    ]
+  },
+  {
+    id: '13',
+    name: 'Cable Chain Bracelet',
+    slug: 'cable-chain-bracelet',
+    price: 92,
+    description: 'Classic cable chain in polished sterling silver. Timeless elegance for everyday luxury.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-10.jpg'],
+    inStock: true,
+    stockLevel: 16,
+    materials: 'Sterling Silver',
+    features: [
+      'Polished cable chain',
+      'Spring ring clasp',
+      'Multiple length options',
+      'Lifetime warranty'
+    ]
+  },
+  {
+    id: '14',
+    name: 'Vintage Black Hoodie',
+    slug: 'vintage-black-hoodie',
+    price: 165,
+    description: 'Vintage-washed black hoodie with distressed detailing. Modern luxury with lived-in comfort.',
+    category: 'hoodie',
+    images: ['/generated/hoodie-4.jpg'],
+    inStock: true,
+    stockLevel: 10,
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    materials: '100% Premium Cotton',
+    features: [
+      'Vintage wash finish',
+      'Distressed detailing',
+      'Heavyweight cotton',
+      'Relaxed fit',
+      'Unique fading on each piece'
+    ]
+  },
+  {
+    id: '15',
+    name: 'Hammered Silver Band',
+    slug: 'hammered-silver-band',
+    price: 78,
+    description: 'Hand-hammered sterling silver band bracelet. Artisanal texture meets minimalist form.',
+    category: 'bracelet',
+    images: ['/generated/bracelet-11.jpg'],
+    inStock: true,
+    stockLevel: 11,
+    materials: 'Sterling Silver',
+    features: [
+      'Hand-hammered texture',
+      'Solid silver construction',
+      'Slightly adjustable',
+      'Artisan crafted'
+    ]
+  },
+  {
+    id: '16',
+    name: 'Bone White Hoodie',
+    slug: 'bone-white-hoodie',
+    price: 145,
+    description: 'Premium hoodie in sophisticated bone white. Clean aesthetic with uncompromising quality.',
+    category: 'hoodie',
+    images: ['/generated/hoodie-5.jpg'],
+    inStock: true,
+    stockLevel: 15,
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    materials: '80% Cotton, 20% Polyester',
+    features: [
+      'Premium heavyweight fabric',
+      'Ribbed cuffs and hem',
+      'Kangaroo pocket',
+      'Embroidered logo detail',
+      'Pre-shrunk for perfect fit'
+    ]
   }
 ];
 
@@ -206,7 +394,7 @@ export function getAverageRating(productId: string): number {
   return sum / productReviews.length;
 }
 
-// Featured products (first 4 for homepage)
+// Featured products (all products for homepage)
 export function getFeaturedProducts(): Product[] {
-  return products.slice(0, 4);
+  return products;
 }

@@ -78,13 +78,18 @@ export default function Home() {
       </section>
 
       {/* Featured Collections */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-semibold uppercase tracking-[0.05em] text-center mb-12">
-            Featured Collections
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-[0.05em] mb-3">
+              Our Complete Collection
+            </h2>
+            <p className="text-sm text-gray-600 uppercase tracking-wider">
+              {featuredProducts.length} Premium Items
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
